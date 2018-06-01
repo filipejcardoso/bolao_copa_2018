@@ -75,7 +75,8 @@
               <p>4.2. Caso haja empate, o prêmio será divido entre os ganhadores, com isso pode acontecer que o primeiro colocado receba um valor final menor que o segundo colocado.</p>
 
             </div>
-              
+
+
               <!--<div class="col s12">
                 <div class="card">
                   <div class="card-image">
