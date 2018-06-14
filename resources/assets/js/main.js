@@ -26,8 +26,8 @@ Vue.component('apostas',Apostas);
 Vue.component('lista-jogos',ListaJogos);
 
 //============CONSTANTES=====================
-// window.api = "copa.eletrobidu.com.br";
-window.api = "copa.com";
+window.api = "copa.eletrobidu.com.br";
+// window.api = "copa.com";
 
 const app = new Vue({
 	store,
