@@ -61,72 +61,84 @@ methods: {
           alert(e)
         })
     },
-    updateJogos($id){
-      let url;
-      const payload = {"records":[{"escore1":`${$(`#input_1_${$id}`).val()}`,"escore2":`${$(`#input_2_${$id}`).val()}`}]};
-      
-      let i;
-      let k = 0;
-      for(i=0;i<3;i++)
-      {
-
-        if(i == 0)
-          url = `http://copa.eletrobidu.com.br/api/jogos/${$id}`;
-        else if(i == 1)
-          url = `http://bardojoao.com.br/api/jogos/${$id}`;
-        else if(i == 2)
-          url = `http://mogibahr.com.br/api/jogos/${$id}`;
-        this.axios.patch(url, payload)
-        .then(response => {
-            M.toast({html: 'Alterado com sucesso!!!'});
-        })
-        .catch(e => {
-          alert(e)
-        })
-      }
-      if(k == 2)
-      {
-        M.toast({html: 'Alterado com sucesso!!!'});
-        this.loadJogos();
-      }
-      else
-      {
-          M.toast({html: 'Erro, repita a operação'});
-      }
+    updateJogos(id){
+      this.updateJogosBidu(id);
     },    
-    updateStatus($id, $status){
-      let url;
-      const payload = {"records":[{"status":`${$status}`}]};
+    updateJogosBidu(id){
+      const url = `http://copa.eletrobidu.com.br/api/jogos/${id}`;;
+      const payload = {"records":[{"escore1":`${$(`#input_1_${id}`).val()}`,"escore2":`${$(`#input_2_${id}`).val()}`}]};
       
-      let i;
-      let k = 0;
-      for(i=0;i<3;i++)
-      {
-
-        if(i == 0)
-          url = `http://copa.eletrobidu.com.br/api/jogos/${$id}`;
-        else if(i == 1)
-          url = `http://bardojoao.com.br/api/jogos/${$id}`;
-        else if(i == 2)
-          url = `http://mogibahr.com.br/api/jogos/${$id}`;
-
+      this.axios.patch(url, payload)
+      .then(response => {
+         this.updateJogosJoao(id);
+      })
+      .catch(e => {
+        alert(e)
+      })
+    },    
+    updateJogosJoao(id){
+      const url = `http://bolao.bardojoao.com.br/api/jogos/${id}`;;
+      const payload = {"records":[{"escore1":`${$(`#input_1_${id}`).val()}`,"escore2":`${$(`#input_2_${id}`).val()}`}]};
+      
+      this.axios.patch(url, payload)
+      .then(response => {
+          this.updateJogosMogibahr(id);
+      })
+      .catch(e => {
+        alert(e)
+      })
+    },    
+    updateJogosMogibahr(id){
+      const url = `http://bolao.mogibahr.com.br/api/jogos/${id}`;;
+      const payload = {"records":[{"escore1":`${$(`#input_1_${id}`).val()}`,"escore2":`${$(`#input_2_${id}`).val()}`}]};
+      
+      this.axios.patch(url, payload)
+      .then(response => {
+          M.toast({html: 'Alterado com sucesso!!!'});
+      })
+      .catch(e => {
+        alert(e)
+      })
+    },    
+    updateStatus(id, status){
+        this.updateStatusBidu(id, status);
+    },
+    updateStatusBidu(id, status){
+      const url = `http://copa.eletrobidu.com.br/api/jogos/${id}`;
+      const payload = {"records":[{"status":`${status}`}]};
+      
         this.axios.patch(url, payload)
         .then(response => {
-          k++;
+          this.updateStatusJoao(id, status);
         })
         .catch(e => {
           alert(e)
         })
-      }
-      if(k == 2)
-      {
-        M.toast({html: 'Alterado com sucesso!!!'});
-        this.loadJogos();
-      }
-      else
-      {
-          M.toast({html: 'Erro, repita a operação'});
-      }
+    },
+    updateStatusJoao(id, status){
+      const url = `http://bolao.bardojoao.com.br/api/jogos/${id}`;
+      const payload = {"records":[{"status":`${status}`}]};
+      
+        this.axios.patch(url, payload)
+        .then(response => {
+          this.updateStatusMogibahr(id, status);
+        })
+        .catch(e => {
+          alert(e)
+        })
+    },
+    updateStatusMogibahr(id, status){
+      const url = `http://bolao.mogibahr.com.br/api/jogos/${id}`;
+      const payload = {"records":[{"status":`${status}`}]};
+      
+        this.axios.patch(url, payload)
+        .then(response => {
+          M.toast({html: 'Alterado com sucesso!!!'});
+          this.loadJogos();
+        })
+        .catch(e => {
+          alert(e)
+        })
     }
   },
   created(){
