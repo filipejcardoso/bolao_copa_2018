@@ -12,6 +12,7 @@ import Classificacao from './components/Classificacao.vue'
 import Participante from './components/Participante.vue'
 import ListaParticipantes from './components/ListaParticipantes.vue'
 import Apostas from './components/Apostas.vue'
+import ListaJogos from './components/ListaJogos.vue'
 
 //============VUE=====================
 Vue.use(VueAxios, axios);
@@ -22,10 +23,11 @@ Vue.component('classificacao',Classificacao);
 Vue.component('participante',Participante);
 Vue.component('lista-participantes',ListaParticipantes);
 Vue.component('apostas',Apostas);
+Vue.component('lista-jogos',ListaJogos);
 
 //============CONSTANTES=====================
-window.api = "copa.eletrobidu.com.br";
-// window.api = "copa.com";
+// window.api = "copa.eletrobidu.com.br";
+window.api = "copa.com";
 
 const app = new Vue({
 	store,

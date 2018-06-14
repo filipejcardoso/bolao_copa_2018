@@ -8,7 +8,7 @@ class Jogos extends Model
 {
 	protected $table = 'jogos';
     protected $primaryKey = 'id';
-    protected $fillable = ['satus','time1','time2','escore1','escore2','data'];
+    protected $fillable = ['status','time1','time2','escore1','escore2','data'];
 
     static public function relacoes()
     {

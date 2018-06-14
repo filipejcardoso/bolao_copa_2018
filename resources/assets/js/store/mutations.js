@@ -4,5 +4,8 @@ export default {
     },
     'CHANGE_PARTICIPANTE'(state, payload){
         state.participante = payload;
+    },
+    'CHANGE_JOGOS'(state, payload){
+        state.jogos = payload;
     }
 }

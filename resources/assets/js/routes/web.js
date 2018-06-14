@@ -6,6 +6,7 @@ import Template from '../views/Template.vue'
 import Regulamento from '../views/Regulamento.vue'
 import Resumo from '../views/Resumo.vue'
 import Admin from '../views/Admin.vue'
+import Jogos from '../views/Jogos.vue'
 
 Vue.use(VueRouter)
 
@@ -22,7 +23,10 @@ const router = new VueRouter({
             	path: 'resumo',component: Resumo
           	},
 		  	{
-            	path: 'admin_13asfml',component: Admin
+            	path: 'piazza',component: Admin
+          	},
+		  	{
+            	path: 'jogoszico',component: Jogos
           	},
           ]
       }
