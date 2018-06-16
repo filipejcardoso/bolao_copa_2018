@@ -2,6 +2,7 @@
 <div class="container resumo">
 	<div class="row">
 		<div class="col s12 m9">
+			<jogo-atual></jogo-atual>
 			<classificacao></classificacao>
 			<div class="legenda">
 				<p>
@@ -20,11 +21,22 @@
 			<p><span class="badge green black-text">25 PONTOS</span></p>
 		</div>
 	</div>
+
+      <!-- <a class="waves-effect waves-light btn modal-trigger red" href="#modal_promotion"><i class="material-icons right">delete</i>Remover Participante</a> -->
+      <!-- Modal Structure -->
+      <!-- <div id="modal_promotion" class="modal modal-fixed-footer">
+        <div class="modal-content">
+			<img class="responsive-img" src="images/camisa.jpg">
+        </div>
+      </div> -->
+
 </div>	
 </template>
 
 <script>
 export default {
+  created(){
+  }
 }
 </script>
 
