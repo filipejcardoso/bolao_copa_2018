@@ -1,7 +1,7 @@
 <template>
 	<div>
         <div class="row">
-          <div class="col s12"  v-for="(item) in this.$store.state.jogos" :key="item.id">
+          <div class="col s12"  v-for="(item,index) in this.$store.state.jogos" :key="item.id">
             <div v-if="item.status == 1" class="col s12">
             <div class="row valign-wrapper reset">
               <div class="col s2 center-align"><h6>{{item.id}}</h6><h6>{{item.time1}}</h6></div>
