@@ -26,24 +26,24 @@
 </template>
 <script>
 export default {
-// methods: {
-//     loadJogos()
-//     {
-//         const url = `http://copa.eletrobidu.com.br/api/jogos`;
-//         this.axios.get(url)
-//         .then(response => {
+methods: {
+    loadAtual()
+    {
+        const url = `http://copa.eletrobidu.com.br/api/jogos`;
+        this.axios.get(url)
+        .then(response => {
 
-//           const payload = response.data['records'];
-//           this.$store.commit('CHANGE_JOGOS', payload);
-//         })
-//         .catch(e => {
-//           alert(e)
-//         })
-//     }
-//   },
-//   created(){
-//       this.loadJogos();
-//   }
+          const payload = response.data['records'];
+          this.$store.commit('CHANGE_JOGOS', payload);
+        })
+        .catch(e => {
+          alert(e)
+        })
+    }
+  },
+  created(){
+      this.loadAtual();
+  }
 }
 </script>
 <style>
