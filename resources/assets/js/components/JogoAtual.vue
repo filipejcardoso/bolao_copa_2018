@@ -1,6 +1,6 @@
 <template>
 	<div>
-        <!-- <div class="row">
+        <div class="row">
           <div class="col s12"  v-for="(item) in this.$store.state.jogos" :key="item.id">
             <div v-if="item.status == 1" class="col s12">
             <div class="row valign-wrapper reset">
@@ -21,7 +21,7 @@
             </div>
             </div>
             </div>       
-          </div> -->
+          </div>
     </div>
 </template>
 <script>
