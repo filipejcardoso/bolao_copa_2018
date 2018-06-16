@@ -22,14 +22,6 @@
 		</div>
 	</div>
 
-      <!-- <a class="waves-effect waves-light btn modal-trigger red" href="#modal_promotion"><i class="material-icons right">delete</i>Remover Participante</a> -->
-      <!-- Modal Structure -->
-      <!-- <div id="modal_promotion" class="modal modal-fixed-footer">
-        <div class="modal-content">
-			<img class="responsive-img" src="images/camisa.jpg">
-        </div>
-      </div> -->
-
 </div>	
 </template>
 
