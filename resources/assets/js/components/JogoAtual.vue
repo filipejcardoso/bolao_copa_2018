@@ -1,6 +1,6 @@
 <template>
 	<div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col s12"  v-for="(item) in this.$store.state.jogos" :key="item.id">
             <div v-if="item.status == 1" class="col s12">
             <div class="row valign-wrapper reset">
@@ -21,36 +21,34 @@
             </div>
             </div>
             </div>       
-          </div>
+          </div> -->
     </div>
 </template>
 <script>
 export default {
-methods: {
-    loadJogos()
-    {
-        const url = `http://copa.eletrobidu.com.br/api/jogos`;
-        this.axios.get(url)
-        .then(response => {
+// methods: {
+//     loadJogos()
+//     {
+//         const url = `http://copa.eletrobidu.com.br/api/jogos`;
+//         this.axios.get(url)
+//         .then(response => {
 
-          const payload = response.data['records'];
-          this.$store.commit('CHANGE_JOGOS', payload);
-        })
-        .catch(e => {
-          alert(e)
-        })
-    }
-  },
-  created(){
-      this.loadJogos();
-  }
+//           const payload = response.data['records'];
+//           this.$store.commit('CHANGE_JOGOS', payload);
+//         })
+//         .catch(e => {
+//           alert(e)
+//         })
+//     }
+//   },
+//   created(){
+//       this.loadJogos();
+//   }
 }
 </script>
 <style>
   .reset{padding: 0px!important; margin: 0px!important;}
 	.line{border-bottom: solid 1px #ddd; padding: 0px!important; margin: 0px!important;}
 	.line:hover{cursor: pointer;}
-	.pontos,.escore_vencedor,.acerto_vencedor{background-color: #eee!important;}
-  .bandeira{max-width: 40px!important;}
   .horario{font-size: 13px; color: #888;}
 </style>
