@@ -63,7 +63,6 @@ export default {
           this.$store.commit('CHANGE_PARTICIPANTE', payloadParticipante)
         })
         .catch(e => {
-          alert(e)
         })
       }
       else

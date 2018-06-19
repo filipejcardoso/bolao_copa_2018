@@ -61,7 +61,6 @@ export default {
         this.loadApostas(0);
       })
       .catch(e => {
-        alert(e)
       })
     },
     loadApostas(index) {
@@ -77,8 +76,7 @@ export default {
           this.$store.commit('CHANGE_PARTICIPANTE', payloadParticipante)
         })
         .catch(e => {
-          alert(e)
-        })
+          })
       }
       else
       {
@@ -97,7 +95,6 @@ export default {
         $(nome_participante).val('');
       })
       .catch(e => {
-        alert(e)
       })
     },
     destroyParticipante()
@@ -110,7 +107,6 @@ export default {
         this.closeModalDestroy();
       })
       .catch(e => {
-        alert(e)
       })
     },
     keyInsert: function(event){

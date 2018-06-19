@@ -42,7 +42,6 @@ methods: {
           M.toast({html: 'Alterado com sucesso!!!'});
        })
       .catch(e => {
-        alert(e)
       })
     }
   }

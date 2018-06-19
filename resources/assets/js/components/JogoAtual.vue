@@ -37,7 +37,6 @@ methods: {
           this.$store.commit('CHANGE_JOGOS', payload);
         })
         .catch(e => {
-          alert(e)
         })
     }
   },

@@ -2,7 +2,9 @@
 <div class="container resumo">
 	<div class="row">
 		<div class="col s12 m9">
+		    <img class="responsive-img" src="images/bidu.png">
 			<jogo-atual></jogo-atual>
+		    <img class="responsive-img" src="images/face.png">
 			<classificacao></classificacao>
 			<div class="legenda">
 				<p>
