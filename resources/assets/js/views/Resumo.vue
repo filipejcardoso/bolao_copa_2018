@@ -4,7 +4,7 @@
 		<div class="col s12 m9">
 		    <img class="responsive-img" src="images/bidu.png">
 			<jogo-atual></jogo-atual>
-		    <img class="responsive-img" src="images/face.png">
+		    <a href="https://www.facebook.com/EletroBidu/"><img class="responsive-img" src="images/face.png"></a>
 			<classificacao></classificacao>
 			<div class="legenda">
 				<p>
