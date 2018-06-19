@@ -2,7 +2,7 @@
 <div class="container resumo">
 	<div class="row">
 		<div class="col s12 m9">
-		    <img class="responsive-img" src="images/bidu.png">
+		    <a href="https://www.facebook.com/EletroBidu/"><img class="responsive-img" src="images/bidu.png"></a>
 			<jogo-atual></jogo-atual>
 		    <a href="https://www.facebook.com/EletroBidu/"><img class="responsive-img" src="images/face.png"></a>
 			<classificacao></classificacao>
