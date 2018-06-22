@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     loadParticipantes(){
-      this.axios.get('http://'+window.api+'/api/participantes')
+      this.axios.get('http://'+window.api+'/api/eletrobidu/participantes')
       .then(response => {
 
         this.participantes = response.data['records'];
@@ -69,7 +69,7 @@ export default {
         const payload = this.participantes[index].id;
         this.$store.commit('CHANGE_ID', payload)
 
-        this.axios.get('http://'+window.api+'/api/participantes/'+this.$store.state.id)
+        this.axios.get('http://'+window.api+'/api/participantes/eletrobidu/'+this.$store.state.id)
         .then(response => {
 
           const payloadParticipante = response.data['records'];
@@ -85,7 +85,7 @@ export default {
       }
     },
     inserirParticipante(){
-      const url = `http://${window.api}/api/participantes`;
+      const url = `http://${window.api}/api/eletrobidu/participantes`;
       const payload = {"records":[{"nome":`${$(nome_participante).val()}`}]};
 
       this.axios.post(url, payload)
@@ -99,7 +99,7 @@ export default {
     },
     destroyParticipante()
     {
-      const url = `http://${window.api}/api/participantes/${this.$store.state.id}`;
+      const url = `http://${window.api}/api/participantes/eletrobidu/${this.$store.state.id}`;
 
       this.axios.delete(url)
       .then(response => {

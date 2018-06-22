@@ -21,6 +21,7 @@ class JogosController extends Controller
             $rest->input = $request->toArray();
 
             $builder = $rest->getBuilder();
+            // $builder->orderBy('ord','desc');
             $responseBd = $rest->getCollection('paginate', null);
             $result = $responseBd['result'];
 

@@ -29,7 +29,7 @@ export default {
 methods: {
     loadAtual()
     {
-        const url = `http://copa.eletrobidu.com.br/api/jogos`;
+        const url = `http://copa.eletrobidu.com.br/api/eletrobidu/jogos`;
         this.axios.get(url)
         .then(response => {
 
@@ -42,7 +42,8 @@ methods: {
   },
   created(){
       this.loadAtual();
-  }
+      this.timer = setInterval(this.loadAtual, 3000)
+    }
 }
 </script>
 <style>

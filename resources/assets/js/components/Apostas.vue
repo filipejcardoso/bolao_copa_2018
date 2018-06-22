@@ -34,7 +34,7 @@
 export default {
 methods: {
     updateAposta($id){
-      const url = `http://${window.api}/api/participantes/${this.$store.state.id}/apostas/${$id}`;
+      const url = `http://${window.api}/api/eletrobidu/participantes/${this.$store.state.id}/apostas/${$id}`;
       const payload = {"records":[{"escore1":`${$(`#input_1_${$id}`).val()}`,"escore2":`${$(`#input_2_${$id}`).val()}`}]};
 
       this.axios.patch(url, payload)
