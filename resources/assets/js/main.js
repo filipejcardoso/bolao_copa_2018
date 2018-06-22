@@ -30,6 +30,7 @@ Vue.component('jogo-atual',JogoAtual);
 //============CONSTANTES=====================
 window.api = "copa.eletrobidu.com.br";
 // window.api = "copa.com";
+// window.api = "copa.com";
 
 const app = new Vue({
 	store,
