@@ -33,6 +33,8 @@ window.api = "sandbox.eletrobidu.com.br";
 window.joao = "sandbox.bardojoao.com.br";
 window.mogibahr = "sandbox.mogibahr.com.br";
 
+// window.api = "sandbox.mogibahr.com.br";
+
 const app = new Vue({
 	store,
 	el: '#root',
