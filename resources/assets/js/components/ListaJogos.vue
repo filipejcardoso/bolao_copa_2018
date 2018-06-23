@@ -50,7 +50,7 @@ export default {
 methods: {
     loadJogos()
     {
-        const url = `http://copa.eletrobidu.com.br/api/eletrobidu/jogos`;
+        const url = `http://${window.api}/api/eletrobidu/jogos`;
         this.axios.get(url)
         .then(response => {
 
@@ -65,7 +65,7 @@ methods: {
       this.updateJogosBidu(id);
     },    
     updateJogosBidu(id){
-      const url = `http://copa.eletrobidu.com.br/api/eletrobidu/jogos/${id}`;;
+      const url = `http://${window.api}/api/eletrobidu/jogos/${id}`;;
       const payload = {"records":[{"escore1":`${$(`#input_1_${id}`).val()}`,"escore2":`${$(`#input_2_${id}`).val()}`}]};
       
       this.axios.patch(url, payload)
@@ -77,7 +77,7 @@ methods: {
       })
     },    
     updateJogosJoao(id){
-      const url = `http://bolao.bardojoao.com.br/api/jogos/${id}`;;
+      const url = `http://${window.joao}/api/jogos/${id}`;;
       const payload = {"records":[{"escore1":`${$(`#input_1_${id}`).val()}`,"escore2":`${$(`#input_2_${id}`).val()}`}]};
       
       this.axios.patch(url, payload)
@@ -89,7 +89,7 @@ methods: {
       })
     },    
     updateJogosMogibahr(id){
-      const url = `http://bolao.mogibahr.com.br/api/jogos/${id}`;;
+      const url = `http://${window.mogibahr}/api/jogos/${id}`;;
       const payload = {"records":[{"escore1":`${$(`#input_1_${id}`).val()}`,"escore2":`${$(`#input_2_${id}`).val()}`}]};
       
       this.axios.patch(url, payload)
@@ -104,7 +104,7 @@ methods: {
         this.updateStatusBidu(id, status);
     },
     updateStatusBidu(id, status){
-      const url = `http://copa.eletrobidu.com.br/api/eletrobidu/jogos/${id}`;
+      const url = `http://${window.api}/api/eletrobidu/jogos/${id}`;
       const payload = {"records":[{"status":`${status}`}]};
       
         this.axios.patch(url, payload)
@@ -116,7 +116,7 @@ methods: {
         })
     },
     updateStatusJoao(id, status){
-      const url = `http://bolao.bardojoao.com.br/api/jogos/${id}`;
+      const url = `http://${window.joao}/api/jogos/${id}`;
       const payload = {"records":[{"status":`${status}`}]};
       
         this.axios.patch(url, payload)
@@ -128,7 +128,7 @@ methods: {
         })
     },
     updateStatusMogibahr(id, status){
-      const url = `http://bolao.mogibahr.com.br/api/jogos/${id}`;
+      const url = `http://${window.mogibahr}/api/jogos/${id}`;
       const payload = {"records":[{"status":`${status}`}]};
       
         this.axios.patch(url, payload)
